@@ -47,7 +47,7 @@ namespace xeus
         std::lock_guard<std::mutex> guard(m_queue_mutex);
         if (!m_message_queue.empty())
         {
-            xpub_message msg = std::move(m_message_queue.back());
+            xpub_message msg = std::move(m_message_queue.front());
             m_message_queue.pop();
             return msg;
         }

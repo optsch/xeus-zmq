@@ -32,6 +32,8 @@
 *.app
 
 build/
+debug_build/
+release_build/
 test/__pycache__/
 
 # Documentation build artefacts
